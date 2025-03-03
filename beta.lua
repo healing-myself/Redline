@@ -8808,7 +8808,7 @@ do
                     themedata = nil
                                 
                     local worked = pcall(function()
-                        themedata = game:HttpGet('https://raw.githubusercontent.com/topitbopit/Redline/main/themes/'..o..'.json')
+                        themedata = game:HttpGet('https://raw.githubusercontent.com/healing-myself/Redline/main/themes/'..o..'.json')
                     end)
                     
                     if ( not worked ) then
@@ -8823,11 +8823,11 @@ do
             s_apply:Connect('Clicked',function()
                 writefile('REDLINE/theme.json', themedata)
                 ui:Destroy()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/Redline/main/loader.lua'))()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/Redline/main/loader.lua'))()
             end)
             
             task.spawn(function()
-                local themes = game:HttpGet('https://raw.githubusercontent.com/topitbopit/Redline/main/themes/themelist.txt')
+                local themes = game:HttpGet('https://raw.githubusercontent.com/healing-myself/Redline/main/themes/themelist.txt')
                 themes = themes:split(']')
                 for i = 1, #themes do
                     local a = themes[i] -- insane variable names 
@@ -9495,7 +9495,7 @@ else
 end
 
 if ( tpQueue and _G.RLQUEUED == false ) then
-    tpQueue[[if(readfile('REDLINE/Queued.txt') == 'true')then loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/Redline/main/loader.lua'))()end]]
+    tpQueue[[if(readfile('REDLINE/Queued.txt') == 'true')then loadstring(game:HttpGet('https://raw.githubusercontent.com/healing-myself/Redline/main/loader.lua'))()end]]
     writefile('REDLINE/Queued.txt', 'true')
     _G.RLQUEUED = true
 end
